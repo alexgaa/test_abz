@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\User;
 
 /**
@@ -20,14 +19,14 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $name = fake()->firstName;
+        $color = rand(1, 999999);
         return [
-            'name' => fake()->firstName,
+            'name' => $name,
             'email' => fake()->unique()->safeEmail(),
             'phone' => '+3809' . rand(10000000, 99999999),
             'position_id' => rand(1, 10),
-            'photo' => fake()->imageUrl, //TODO исправить значение
-            'password' => fake()->password(10,10),
-            'remember_token' => Str::random(50),
+            'photo' => "https://via.placeholder.com/70x70.jpg/" . $color . "?text=" . $name
         ];
     }
 
