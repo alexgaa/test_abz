@@ -21,3 +21,10 @@ Route::post('users',[UserController::class, 'store'])->name('users.store');
 Route::get('users',[UserController::class, 'getAll'])->name('users.getAll');
 Route::get('users/{id}',[UserController::class, 'getById']);
 Route::get('positions', [PositionController::class, 'getAll']);
+
+Route::fallback(function () {
+    $result = ["success" => false,
+        "message" => "Page not found."
+    ];
+    return response()->json($result, 404);
+});

@@ -86,19 +86,20 @@
                         <div class="mb-3">
                             <input name="name" id="name" type="text"
                                    class="form-control"
-                                   placeholder="Name" value="name">
+                                   placeholder="Name">
                         </div>
                         <div class="mb-3">
                             <input name="email" id="email" type="email"
                                    class="form-control"
-                                   placeholder="Email" value ="alex@alex.com">
+                                   placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <input name="phone" id="phone" type="text"
                                    class="form-control"
-                                   placeholder="+380666666666" value="+380666666661">
+                                   placeholder="+380666666666">
                         </div>
                         <div class="mb-3">
+                            <label for="position_id">Position:</label>
                             <select name="position_id" class="form-control" id="position_id">
                                 @foreach($positions as $position)
                                     <option value="{{$position->id}}">{{$position->name}}</option>
@@ -106,6 +107,7 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label for="photo">Photo:</label>
                             <input name="photo" id="photo" type="file"
                                    class="form-control"
                                    placeholder="image">
