@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('phone',13);
             $table->integer('position_id');
             $table->string('photo');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->timestamps();
         });
     }

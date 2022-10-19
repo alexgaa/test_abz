@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->string('job_title', 150);
+            $table->string('name', 150);
             $table->timestamps();
         });
     }
