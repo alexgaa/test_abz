@@ -87,7 +87,6 @@ $(document).ready(function(){
                 $('#resultModal').modal('show');
                 $('#sendForm').trigger("reset");
                 $('#addUserModal').modal('hide');
-                getAllUsers();
             },
             error: function (response) {
                 if(response.status === 422) {
