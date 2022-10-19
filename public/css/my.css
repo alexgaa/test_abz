@@ -1,0 +1,25 @@
+#loginContainer{
+    width: 400px;
+}
+#success-message {
+    padding-bottom: 50px;
+    width: 400px;
+    min-height: 200px;
+}
+.success-message-1 {
+    min-height: 200px;
+}
+
+
+.block-min-height {
+    min-height: 600px;
+}
+#menu-left {
+    min-height: 400px;
+}
+#center-content {
+    min-height: 500px;
+}
+.btn-min-width {
+    min-width: 180px;
+}
